@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/thedullmedia/static/css/main.10faa460.css",
-    "main.js": "/thedullmedia/static/js/main.85908628.js",
-    "index.html": "/thedullmedia/index.html",
-    "main.10faa460.css.map": "/thedullmedia/static/css/main.10faa460.css.map",
-    "main.85908628.js.map": "/thedullmedia/static/js/main.85908628.js.map"
+    "main.css": "/static/css/main.10faa460.css",
+    "main.js": "/static/js/main.85908628.js",
+    "index.html": "/index.html",
+    "main.10faa460.css.map": "/static/css/main.10faa460.css.map",
+    "main.85908628.js.map": "/static/js/main.85908628.js.map"
   },
   "entrypoints": [
     "static/css/main.10faa460.css",
