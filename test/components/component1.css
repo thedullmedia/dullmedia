@@ -1,0 +1,21 @@
+.component1-container {
+  width: 1030px;
+  height: 607px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.component1-image {
+  width: 1097px;
+  height: 647px;
+  object-fit: cover;
+}
+.component1-root-class-name {
+  top: 746px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  position: absolute;
+}

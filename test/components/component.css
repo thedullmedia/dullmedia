@@ -1,0 +1,12 @@
+.component-container {
+  display: flex;
+  position: relative;
+}
+.component-image {
+  width: 1050px;
+  height: 562px;
+  object-fit: cover;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 70px;
+}

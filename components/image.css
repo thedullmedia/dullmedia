@@ -1,0 +1,19 @@
+.image-container {
+  display: flex;
+  position: relative;
+}
+.image-image {
+  width: 963px;
+  z-index: 10;
+  user-select: none;
+}
+@media(max-width: 991px) {
+  .image-image {
+    width: 100%;
+  }
+}
+@media(max-width: 767px) {
+  .image-image {
+    width: 100%;
+  }
+}

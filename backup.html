@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TheDullMedia</title>
+    <meta property="og:title" content="TheDullMedia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+       body::-webkit-scrollbar {
+         width: 0.5em;
+         z-index: 100;
+         background-color:transparent;
+       }
+
+
+      body::-webkit-scrollbar-thumb {
+         background-color:white;
+         box-shadow:0 -100vh 0 100vh #5128f5;//magic
+       }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <script
+        type="text/javascript"
+        src="https://unpkg.com/dangerous-html@0.1.12/dist/default/lib.umd.js"
+      ></script>
+      <link href="./home.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <section class="home-hero">
+          <div class="home-menu">
+            <div id="mobile-menu" class="home-mobile-navigation">
+              <img
+                alt="pastedImage"
+                src="public/pastedimage-no9b-1500h.png"
+                class="home-logo"
+              />
+              <div class="home-links">
+                <span class="Link">Solutions</span>
+                <span class="Link">How it works</span>
+                <span class="Link">Prices</span>
+              </div>
+              <div id="close-mobile-menu" class="home-close-mobile-menu">
+                <svg viewBox="0 0 804.5714285714286 1024" class="home-icon">
+                  <path
+                    d="M741.714 755.429c0 14.286-5.714 28.571-16 38.857l-77.714 77.714c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-168-168-168 168c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-77.714-77.714c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l168-168-168-168c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168 168-168c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857s-5.714 28.571-16 38.857l-168 168 168 168c10.286 10.286 16 24.571 16 38.857z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="home-desktop-navigation">
+              <nav class="home-centered">
+                <img
+                  alt="image"
+                  src="public/tdm%20blck%20tsprnt-200h.png"
+                  class="home-image"
+                />
+                <div class="home-left">
+                  <div class="home-links1">
+                    <button onclick="solutionsdiv.scrollIntoView()" class="Link">Solutions</button>
+                    <button onclick="faqdiv.scrollIntoView()" class="Link">FAQs</button>
+                    <button onclick="reviewsview.scrollIntoView()" class="Link">Reviews</button>
+                      <br />
+                    </span>
+                  </div>
+                </div>
+                <div class="home-right">
+                  <div class="home-get-started">
+                    <button onclick="calendlysection.scrollIntoView()" class="home-text008">Get started</button>
+                  </div>
+                  <div id="open-mobile-menu" class="home-burger-menu">
+                    <img
+                      alt="pastedImage"
+                      src="public/pastedimage-yxbd.svg"
+                      class="home-mobile-menu-button"
+                    />
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div>
+              <dangerous-html
+                html="<script>
+/*
+Mobile menu - Code Embed
+*/
+
+// Mobile menu
+const mobileMenu = document.querySelector('#mobile-menu')
+
+// Buttons
+const closeButton = document.querySelector('#close-mobile-menu')
+const openButton = document.querySelector('#open-mobile-menu')
+
+// On openButton click, set the mobileMenu position left to -100vw
+openButton.addEventListener('click', function() {
+    mobileMenu.style.transform = 'translateX(0%)'
+})
+
+// On closeButton click, set the mobileMenu position to 0vw
+closeButton.addEventListener('click', function() {
+    mobileMenu.style.transform = 'translateX(100%)'
+})
+</script>"
+              ></dangerous-html>
+            </div>
+          </div>
+          <header class="home-header">
+            <h1 class="home-text009">
+              <span>
+                Boost Your Brand and Acquire Clients like Never Before!
+              </span>
+              <br />
+            </h1>
+            <p class="home-text012">
+              We assist Coaches and Real Estate Professionals in implementing
+              the "Social Funnel Method" to establish a big personal brand where
+              clients&nbsp;come&nbsp;to&nbsp;YOU.
+            </p>
+            <div class="home-get-started1">
+              <button class="home-text013" onclick="calendlysection.scrollIntoView()">Ready to Scale?</button>
+            </div>
+          </header>
+        </section>
+        <section class="home-features" style="background-color: #EFF0F2">
+          <div class="component1-container component1-root-class-name">
+            <img
+              src="public/hsij-700h.png"
+              alt="image"
+              class="component1-image"
+            />
+          </div>
+          <div class="home-title">
+            <span class="home-text014">
+              <span>Let's grow your social media</span>
+              <br />
+              <span>presence</span>
+            </span>
+          </div>
+          <div class="home-cards">
+            <div class="home-container1">
+              <div class="card">
+                <img
+                  alt="pastedImage"
+                  src="public/pastedimage-fii6m-200h.png"
+                  class="home-icon02"
+                />
+                <span class="home-text018">Schedule</span>
+                <span class="home-text019">
+                  With your personalized content calendar
+                </span>
+              </div>
+              <div class="home-publish card">
+                <img
+                  alt="pastedImage"
+                  src="public/pastedimage-mimg-200h.png"
+                  class="home-icon03"
+                />
+                <span class="home-text020">Publish</span>
+                <span class="home-text021">
+                  At the right time to the right audience
+                </span>
+              </div>
+            </div>
+            <div class="home-container2">
+              <div class="card home-analyze">
+                <img
+                  alt="pastedImage"
+                  src="public/pastedimage-l6p-200h.png"
+                  class="home-icon04"
+                />
+                <span class="home-text022">Analyze</span>
+                <span class="home-text023">
+                  Your data and collect datasets to boost reach
+                </span>
+              </div>
+              <div class="card">
+                <img
+                  alt="pastedImage"
+                  src="public/pastedimage-vyi5-200h.png"
+                  class="home-icon05"
+                />
+                <span class="home-text024">Get leads</span>
+                <span class="home-text025">Faster and more consistently</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-statistics">
+          <div class="home-container3">
+            <div class="active-users-active-users metrics">
+              <span class="active-users-text"><span>28</span></span>
+              <span class="active-users-text1">
+                <span>— Active users</span>
+              </span>
+            </div>
+            <div class="active-users-active-users metrics">
+              <span class="active-users-text"><span>12</span></span>
+              <span class="active-users-text1"><span>— Brands</span></span>
+            </div>
+            <div class="active-users-active-users metrics">
+              <span class="active-users-text"><span>59</span></span>
+              <span class="active-users-text1">
+                <span>— Accounts Managed</span>
+              </span>
+            </div>
+            <div class="active-users-active-users metrics">
+              <span class="active-users-text"><span>40k</span></span>
+              <span class="active-users-text1">
+                <span>— Active leads</span>
+              </span>
+            </div>
+          </div>
+        </section>
+        <section class="home-banners">
+          <div class="home-banner-manage">
+            <div class="home-container4">
+              <div class="home-left1">
+                <span class="sub-title"></span>
+                <span class="home-text027 title">
+                  We Generate Leads &amp; you Convert them!
+                </span>
+                <span class="home-text028">
+                  Let us take care of finding your next Customer.
+                </span>
+                <div class="home-get-started2 template-button">
+                  <button class="home-text008" onclick="calendlysection.scrollIntoView()">Get started</button>
+                </div>
+              </div>
+              <div class="home-image-container">
+                <div class="home-cards-image">
+                  <img
+                    alt="image"
+                    src="public/3075759-400h.jpg"
+                    class="home-image1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-integrations">
+          <div class="home-centered-container">
+            <div class="home-heading">
+              <span class="sub-title"></span>
+              <span class="title">
+                Integrated with the tools you know and love
+              </span>
+              <span class="home-text032">
+                Become available on all platforms, boost reach and build your
+                personal brand&nbsp;
+              </span>
+            </div>
+            <div class="home-pills-container">
+              <div class="home-pills">
+                <div class="home-container5">
+                  <div class="you-tube-you-tube">
+                    <img
+                      alt="pastedImage"
+                      src="public/logos/pastedimage-smjb.svg"
+                      class="you-tube-pasted-image"
+                    />
+                  </div>
+                  <div class="you-tube-you-tube">
+                    <img
+                      alt="pastedImage"
+                      src="public/logos/group%201012-200h.png"
+                      class="you-tube-pasted-image"
+                    />
+                  </div>
+                  <div class="you-tube-you-tube">
+                    <img
+                      alt="pastedImage"
+                      src="public/logos/layer1-200h.png"
+                      class="you-tube-pasted-image"
+                    />
+                  </div>
+                  <div class="you-tube-you-tube">
+                    <img
+                      alt="pastedImage"
+                      src="public/logos/group-200h.png"
+                      class="you-tube-pasted-image"
+                    />
+                  </div>
+                </div>
+                <div class="home-container6">
+                  <div class="you-tube-you-tube">
+                    <img
+                      alt="pastedImage"
+                      src="public/logos/pinterest%20logo-200h.png"
+                      class="you-tube-pasted-image"
+                    />
+                  </div>
+                  <div class="you-tube-you-tube">
+                    <img
+                      alt="pastedImage"
+                      src="public/logos/group%201014-200h.png"
+                      class="you-tube-pasted-image"
+                    />
+                  </div>
+                  <div class="you-tube-you-tube">
+                    <img
+                      alt="pastedImage"
+                      src="public/logos/group%201015-200h.png"
+                      class="you-tube-pasted-image"
+                    />
+                  </div>
+                  <div class="you-tube-you-tube">
+                    <img
+                      alt="pastedImage"
+                      src="public/logos/group%201017-200h.png"
+                      class="you-tube-pasted-image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-pricing"  id="solutionsdiv">
+          <div class="home-centered-container1">
+            <div class="home-heading1">
+              <span class="home-text033 title">How do we help YOU?</span>
+              <span class="home-text034">
+                Create next-generation solutions for your Coaching or Real
+                Estate Business
+              </span>
+              <div class="home-selection"></div>
+            </div>
+            <div class="home-cards1">
+              <div class="home-card">
+                <span class="home-text035">
+                  <span>Say</span>
+                  <span class="home-text037">Goodbye</span>
+                  <span>to</span>
+                </span>
+                <div class="home-bullet-points">
+                  <div class="home-point">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="home-icon06"
+                    >
+                      <path
+                        d="M877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"
+                      ></path>
+                    </svg>
+                    <span class="home-text039">Time Constraint</span>
+                  </div>
+                  <div class="home-point1">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="home-icon08"
+                    >
+                      <path
+                        d="M877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"
+                      ></path>
+                    </svg>
+                    <span class="home-text040">Non-Branded Content</span>
+                  </div>
+                  <div class="home-point2">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="home-icon10"
+                    >
+                      <path
+                        d="M877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"
+                      ></path>
+                    </svg>
+                    <span class="home-text041">Worrying about Leads</span>
+                  </div>
+                  <div class="home-point3">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="home-icon12"
+                    >
+                      <path
+                        d="M877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"
+                      ></path>
+                    </svg>
+                    <span class="home-text042">
+                      Less Engagement &amp; Reach
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-card1">
+                <span class="home-text043">
+                  <span class="home-text044">Say</span>
+                  <span class="home-text045">Welcome</span>
+                  <span class="home-text046">to</span>
+                </span>
+                <div class="home-bullet-points1">
+                  <div class="home-point4">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="home-icon14"
+                    >
+                      <path
+                        d="M877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"
+                      ></path>
+                    </svg>
+                    <span class="home-text047">More Productivity</span>
+                  </div>
+                  <div class="home-point5">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="home-icon16"
+                    >
+                      <path
+                        d="M877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"
+                      ></path>
+                    </svg>
+                    <span class="home-text048">
+                      Personalized Content that "Actually" Works
+                    </span>
+                  </div>
+                  <div class="home-point6">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="home-icon18"
+                    >
+                      <path
+                        d="M877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"
+                      ></path>
+                    </svg>
+                    <span class="home-text049">More Qualified Leads</span>
+                  </div>
+                  <div class="home-point7">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="home-icon20"
+                    >
+                      <path
+                        d="M877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"
+                      ></path>
+                    </svg>
+                    <span class="home-text050">
+                      More Clarity in your Business Goals
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-testimonals">
+          <div class="home-left2">
+            <span class="home-text051"></span>
+            <span class="home-text052 title">What people say about TheDullMedia</span>
+          </div>
+          <div class="home-right1">
+            <div class="home-column">
+              <div class="home-testimonal testimonal">
+                <span class="home-text053"  id="reviewsview">
+                  "Highly recommend TheDullMedia to anyone looking to take their
+                  Instagram presence to the next level."
+                </span>
+                <div class="home-author">
+                  <div class="home-avatar"></div>
+                  <div class="home-user">
+                    <span class="home-name">Ishan Sharma</span>
+                    <span class="home-divider">—</span>
+                    <span class="home-from">Influencer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-testimonal1 testimonal">
+                <span class="home-text054">
+                  “I've been working with TheDull Media for the past year and
+                  it has been an amazing experience. They have a deep
+                  understanding of the ever- changing social media landscape and
+                  are always up to date on the latest trends and strategies.”
+                </span>
+                <div class="home-author1">
+                  <div class="home-avatar1"></div>
+                  <div class="home-user1">
+                    <span class="home-name1">Ayush Shukla</span>
+                    <span class="home-divider1">—</span>
+                    <span class="home-from1">Influencer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-testimonal2 testimonal">
+                <span class="home-text055">
+                  “TheDull Media team is extremely knowledgeable and always
+                  available to answer any questions I have. They have provided
+                  me with creative strategies to maximize my Instagram presence
+                  and gain more followers.”
+                </span>
+                <div class="home-author2">
+                  <div class="home-avatar2"></div>
+                  <div class="home-user2">
+                    <span class="home-name2">Sahas Chopra</span>
+                    <span class="home-divider2">—</span>
+                    <span class="home-from2">Agency Owner</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-testimonal3 testimonal">
+                <span class="home-text056">
+                  "I love the editing style of TheDullMedia, It's impactful
+                  &amp; creative. I highly recommend them to others.”
+                </span>
+                <div class="home-author3">
+                  <div class="home-avatar3"></div>
+                  <div class="home-user3">
+                    <span class="home-name3">Brandon Bee Dixon</span>
+                    <span class="home-divider3">—</span>
+                    <span class="home-from3">Loan Officer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home-column1">
+              <div class="home-testimonal4 testimonal">
+                <span class="home-text057">
+                  "The Dull Media is great at providing creative and innovative
+                  solutions to our challenges. I highly recommend them to anyone
+                  looking to get the most out of their social media campaigns."
+                </span>
+                <div class="home-author4">
+                  <div class="home-avatar4"></div>
+                  <div class="home-user4">
+                    <span class="home-name4">Andy Pipes</span>
+                    <span class="home-divider4">—</span>
+                    <span class="home-from4">Motivational Speaker</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-testimonal5 testimonal">
+                <span class="home-text058">
+                  “I recently used the services of The Dull Media and I am so
+                  impressed with the results. They developed strategic campaigns
+                  that helped grow my followers, increased engagement, and
+                  improved my brand's visibility.”
+                </span>
+                <div class="home-author5">
+                  <div class="home-avatar5"></div>
+                  <div class="home-user5">
+                    <span class="home-name5">Darry Brooke</span>
+                    <span class="home-divider5">—</span>
+                    <span class="home-from5">Sales Coach</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-testimonal6 testimonal">
+                <span class="home-text059">
+                  "I am truly impressed by the exceptional editing work carried
+                  out by TheDullMedia team, which is a testament to their
+                  remarkable attention to detail, unwavering commitment to
+                  quality standards, and unparalleled skill and expertise in
+                  their craft.”
+                </span>
+                <div class="home-author6">
+                  <div class="home-avatar6"></div>
+                  <div class="home-user6">
+                    <span class="home-name6">Moaeez Rehman</span>
+                    <span class="home-divider6">—</span>
+                    <span class="home-from6">Realtor</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-testimonal7 testimonal">
+                <span class="home-text060">
+                  "The strategies that the team built for my account works
+                  perfectly and gave me unexpected results in a much shorter
+                  time frame!"
+                </span>
+                <div class="home-author7">
+                  <div class="home-avatar7"></div>
+                  <div class="home-user7">
+                    <span class="home-name7">Jeremy Harold</span>
+                    <span class="home-divider7">—</span>
+                    <span class="home-from7">Impact Coach</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="home-text061">
+            <span>Show more</span>
+            <br />
+          </span>
+        </section>
+        <!-- <section class="home-action-bar">
+          <div class="home-action">
+            <div class="home-heading2">
+              <img
+                alt="image"
+                src="public/19061-200h.png"
+                class="home-image2"
+              />
+              <img
+                alt="image"
+                src="public/190612-300h.png"
+                class="home-image3"
+              />
+              <span class="home-text064 title">
+                <span>Get leads now&nbsp;</span><br>
+                <span>with TheDullMedia</span>
+              </span>
+              <img
+                alt="image"
+                src="public/2760432-400h.png"
+                class="home-image4"
+              />
+              <div class="home-get-started3 template-button">
+                <span class="home-text067">
+                  <button onclick="calendlysection.scrollIntoView()">Get Started</button>
+                  <br />
+                </span>
+              </div>
+            </div>
+            <div class="home-images"></div>
+          </div>
+        </section> -->
+        
+        <section class="home-action-bar1" style="background-color: #EFF0F2;">
+          <span class="home-text070 title" id="calendlytitle">Book a Free Call Now!</span>
+          <div id="calendlysection"></div>
+          <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/meetwithhammadd/15min" style="min-width:100%;height:100%;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+        </section>
+        <section class="home-faq" style="background-color: white">
+          <div class="home-heading3">
+            <span class="home-text070 title" id="faqdiv">Frequently asked questions</span>
+            <span class="home-text071">
+              Have related questions? Here are the answers!
+            </span>
+          </div>
+          <div class="home-accordion">
+            <div data-faq="closed" class="accordionContainer">
+              <div class="home-header1">
+                <span class="home-text072">
+                  —What kind of social media platforms do you offer your
+                  marketing services for?
+                </span>
+                <svg viewBox="0 0 1024 1024" class="accordionIcon">
+                  <path
+                    d="M316 366l196 196 196-196 60 60-256 256-256-256z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="accordionContent">
+                <span class="home-text073">
+                  We offer our marketing services for all major social media
+                  platforms. This includes Facebook, Instagram, Twitter,
+                  LinkedIn, Pinterest, and more.
+                </span>
+              </div>
+            </div>
+            <div class="accordionContainer">
+              <div class="home-header2">
+                <span class="home-text074">
+                  —How much does your social media marketing services cost?
+                </span>
+                <svg viewBox="0 0 1024 1024" class="accordionIcon">
+                  <path
+                    d="M316 366l196 196 196-196 60 60-256 256-256-256z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="accordionContent">
+                <span class="home-text075">
+                  <span>
+                    The cost of our social media marketing services varies based
+                    on each client's specific needs and goals. We offer
+                    customized packages that are tailored to your business and
+                    budget. Please reach out to us for a personalized quote.
+                  </span>
+                  <br />
+                </span>
+              </div>
+            </div>
+            <div data-faq="closed" class="accordionContainer">
+              <div class="home-header3">
+                <span class="home-text078">
+                  —Can you help me with my social media advertising campaigns?
+                </span>
+                <svg viewBox="0 0 1024 1024" class="accordionIcon">
+                  <path
+                    d="M316 366l196 196 196-196 60 60-256 256-256-256z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="accordionContent">
+                <span class="home-text079">
+                  <span>
+                    Yes, we offer social media advertising services as well.
+                    From targeting and ad creation to monitoring and analytics,
+                    we can assist with all aspects of your social media
+                    advertising needs.
+                  </span>
+                  <br />
+                </span>
+              </div>
+            </div>
+            <div data-faq="closed" class="accordionContainer">
+              <div class="home-header4">
+                <span class="home-text082">
+                  —How do you measure the success of social media campaigns?
+                </span>
+                <svg viewBox="0 0 1024 1024" class="accordionIcon">
+                  <path
+                    d="M316 366l196 196 196-196 60 60-256 256-256-256z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="accordionContent">
+                <span class="home-text083">
+                  We use a variety of metrics to measure the success of social
+                  media campaigns, including engagement rate, reach,
+                  impressions, conversions, and more. We provide regular
+                  reporting and analysis to track progress and identify areas
+                  for improvement.
+                </span>
+              </div>
+            </div>
+            <div data-faq="closed" class="accordionContainer">
+              <div class="home-header5">
+                <span class="home-text084">
+                  —Do you offer social media account management services?
+                </span>
+                <svg viewBox="0 0 1024 1024" class="accordionIcon">
+                  <path
+                    d="M316 366l196 196 196-196 60 60-256 256-256-256z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="accordionContent">
+                <span class="home-text085">
+                  Yes, we provide social media account management services to
+                  ensure your accounts stay active and engaging. This includes
+                  regular posting, community management, and customer service.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <dangerous-html
+              html="<script>
+// Accordion - Code Embed
+
+const accordionContainers = document.querySelectorAll('.accordionContainer'); // All accordion containers
+const accordionContents = document.querySelectorAll('.accordionContent'); // All accordion content
+const accordionIcons = document.querySelectorAll('.accordionIcon'); // All accordion icons
+
+accordionContents.forEach((accordionContent) => {
+    accordionContent.style.display = 'none'; //Hides all accordion contents
+});
+
+accordionContainers.forEach((accordionContainer, index) => {
+    accordionContainer.addEventListener('click', () => {
+        accordionContents.forEach((accordionContent) => {
+            accordionContent.style.display = 'none'; //Hides all accordion contents
+        });
+
+        accordionIcons.forEach((accordionIcon) => {
+            accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
+        });
+
+        if (accordionContainer.classList.contains('accordion-open')) { // Checks if this container has class 'accordion-open'
+            accordionContainer.classList.remove('accordion-open'); // Removes class 'accordion-open'
+        } else {
+            accordionContainers.forEach((accordionContainer) => {
+                accordionContainer.classList.remove('accordion-open'); // Removes class 'accordion-open' from all containers
+            });
+
+            accordionContainer.classList.add('accordion-open'); // Adds class 'accordion-open' to this container
+            accordionContents[index].style.display = 'flex'; // Shows accordion content
+            accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
+        }
+    });
+});
+
+/*
+Here's what the above is doing:
+    1. Selects all accordion containers, contents, and icons
+    2. Hides all accordion contents
+    3. Adds an event listener to each accordion container
+    4. When an accordion container is clicked, it:
+        - Hides all accordion contents
+        - Resets all icon transforms to 0deg (default)
+        - Checks if this container has class 'accordion-open'
+            - If it does, it removes class 'accordion-open'
+            - If it doesn't, it:
+                - Removes class 'accordion-open' from all containers
+                - Adds class 'accordion-open' to this container
+                - Shows accordion content
+                - Rotates accordion icon 180deg
+*/
+</script>"
+            ></dangerous-html>
+          </div>
+        </section>
+        <footer class="home-footer">
+          <div class="home-top">
+            <div class="home-left3">
+              <span class="home-text086">Subscribe to our newsletter</span>
+              <div class="home-subscription">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="home-textinput input"
+                />
+                <div class="home-subscribe">
+                  <span class="home-text087">Subscribe</span>
+                </div>
+              </div>
+              <span class="home-text088">
+                By subscribing to our newsletter you agree with our Terms and
+                Conditions.
+              </span>
+              <div class="home-contact">
+                <span class="home-text089">Contact</span>
+                <a
+                  href="mailto:use@active-app.com?subject=Support"
+                  class="home-link"
+                >
+                  thedullmedia@gmail.com
+                </a>
+              </div>
+            </div>
+            <div class="home-right2">
+              <div class="home-category">
+                <span class="home-text090">Solutions</span>
+                <div class="home-links2">
+                  <span class="home-text091">Responsive Web Design</span>
+                  <span class="home-text092">Responsive Prototypesv</span>
+                  <span class="home-text093">Design to Code</span>
+                  <span class="home-text094">Static Website Builder</span>
+                  <span class="home-text095">Static Website Generator</span>
+                </div>
+              </div>
+              <div class="home-category1">
+                <span class="home-text096">Company</span>
+                <div class="home-links3">
+                  <span class="home-text097">About</span>
+                  <span class="home-text098">Team</span>
+                  <span class="home-text099">News</span>
+                  <span class="home-text100">Partners</span>
+                  <span class="home-text101">Careers</span>
+                  <span class="home-text102">Press &amp; Media</span>
+                </div>
+              </div>
+              <div class="home-category2">
+                <span class="home-text103">Solutions</span>
+                <div class="home-links4">
+                  <span class="home-text104">Twitter</span>
+                  <span class="home-text105">Linkedin</span>
+                  <span class="home-text106">Crunchbase</span>
+                  <span class="home-text107">Instagram</span>
+                  <span class="home-text108">Facebook</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img alt="image" src="public/tdm-logo-200h.png" class="home-image5" />
+          <div class="home-bottom"></div>
+          <span class="home-text109">Copyright © Thedullmedia - 2023</span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
